@@ -1,0 +1,21 @@
+.container {
+    width: 100%;
+    height: calc(100vh - 60px);
+  }
+  h1 {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    margin: 0;
+  }
+  .map-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  #map {
+    width: 100%;
+    height: 100%;
+  }
+  
