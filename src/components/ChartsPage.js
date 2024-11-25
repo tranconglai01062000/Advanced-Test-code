@@ -13,7 +13,8 @@ function ChartsPage() {
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchUsers();
-      setUsers(data);
+      console.log('Fetched users:', data); // Kiểm tra danh sách trả về
+      setUsers(data); // Cập nhật state `users` với mảng kết quả
     };
     fetchData();
   }, []);
@@ -22,8 +23,8 @@ function ChartsPage() {
     labels: ['Male', 'Female'],
     datasets: [{
       data: [
-        users.filter(user => user.gender === 'Male').length,
-        users.filter(user => user.gender === 'Female').length
+        users.filter(user => user.gender === 'male').length,
+        users.filter(user => user.gender === 'female').length
       ],
       backgroundColor: ['#36A2EB', '#FF6384']
     }]
